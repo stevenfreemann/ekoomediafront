@@ -5,14 +5,14 @@ const options = ["Avion", "Automovil", "Crucero", "Monopatin"]
 
 function App() {
   const [vehicle, setVehicle] = useState("Avion");
-  const [data, setData] = useState({ name: "", email: "", phone: "", age: 0 });
+  const [data, setData] = useState({ name: "", email: "", phone: "", age: 18 });
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
     if (modal) {
       setTimeout(() => {
         setModal(false)
-        setData({ name: "", email: "", phone: "", age: 0 })
+        setData({ name: "", email: "", phone: "", age: 18 })
       }, 5000)
     }
   }, [modal])
@@ -66,7 +66,7 @@ function App() {
           <label>Telefono :</label>
           <input required type="text" value={data?.phone} onChange={(e) => handleChange(e, "phone")} />
           <label>Edad :</label>
-          <input required type="number" min="0" max="99" value={data?.age} onChange={(e) => handleChange(e, "age")} />
+          <input required type="number" min="18" max="100" value={data?.age} onChange={(e) => handleChange(e, "age")} />
           <button type='submit'>Guardar</button>
         </form>
       </div>
