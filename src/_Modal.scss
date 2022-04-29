@@ -37,3 +37,9 @@
   opacity: 0;
   transition: visibility 0s 1s, opacity 1s linear;
 }
+
+@media (max-width: 720px) {
+  .modal-container{
+    width: 40%;
+  }
+}
