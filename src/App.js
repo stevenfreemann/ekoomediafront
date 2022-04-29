@@ -24,7 +24,7 @@ function App() {
     try {
       let response = await fetch("https://ekoomediaback.herokuapp.com/users", {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', "Accept": "application/json" },
+        headers: { 'Content-Type': 'application/json', "Accept": "application/json", 'Access-Control-Allow-Origin': '*', "mode": "no-cors" },
         body: JSON.stringify(data)
       })
       let res = await response.json()
