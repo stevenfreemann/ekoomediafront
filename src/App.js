@@ -22,7 +22,7 @@ function App() {
     e.preventDefault()
     console.log('data', data)
     try {
-      let response = await fetch("/users", {
+      let response = await fetch("https://ekoomediaback.herokuapp.com/users", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', "Accept": "application/json" },
         body: JSON.stringify(data)
