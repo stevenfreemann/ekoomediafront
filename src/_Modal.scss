@@ -1,0 +1,39 @@
+.modal {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(2px);
+  h2{
+    filter: drop-shadow(2px 4px 6px black);
+  }
+}
+
+.modal-container{
+  position: fixed;
+  width: 20%;
+  height: 20%;
+  background-color: beige;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 1s linear;
+
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 1s, opacity 1s linear;
+}

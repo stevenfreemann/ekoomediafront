@@ -1,0 +1,88 @@
+
+// imports
+
+@import 'Modal';
+
+// Mixins
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+// Styles
+.app {
+  height: 100vh;
+  background: beige
+}
+.menu {
+  @include flex-center();
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333333;
+}
+.menu li{
+  color: white;
+  text-align: center;
+  padding: 16px;
+  cursor: pointer;
+}
+
+.container-title{
+  @include flex-center();
+  filter: drop-shadow(2px 4px 6px black);
+  h2{
+    text-align: center;
+  }
+}
+.cont-form{
+  @include flex-center();
+  width: 100%
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+};
+
+.form > * {
+  margin: 1%;
+}
+
+.select{
+  animation: select-an 3s;
+  animation-fill-mode:forwards, none;
+}
+
+@keyframes select-an{
+  to {background-color: rgb(99, 3, 3)}
+}
+
+@media (max-width: 720px) {
+  .menu{
+    flex-direction: column;
+  }
+  .form{
+    width: 50%;
+  }
+  h2{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  h2{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .form{
+    width: 67%;
+  }
+}
+
